@@ -225,19 +225,18 @@ if rubrique in arbre_decision:
         st.write(f"**Chemin de décision :** {' → '.join(st.session_state.etapes)}")
 
         # Explications supplémentaires
-        if("Très favorable" or "Favorable") and "Défavorable" in st.session_state.classement: 
-            st.warning("⚠️ **Impact mixte** : Cette dépense a des impacts positifs et négatifs.")
-        elif "Très favorable" in st.session_state.classement:
-            st.success("✅ **Impact positif fort** : Cette dépense réduit significativement les émissions de GES.")
-        elif "Favorable sous conditions" in st.session_state.classement:
-            st.success("⚠️ **Impact positif limité** : Cette dépense améliore la performance, mais sous conditions.")
-        elif "Défavorable" in st.session_state.classement:
+        if "Défavorable" in st.session_state.classement:
             st.error("❌ **Impact négatif** : Cette dépense augmente les émissions de GES.")
         elif "Neutre" in st.session_state.classement:
             st.info("ℹ️ **Impact neutre** : Cette dépense n'a pas d'effet significatif sur les émissions.")
         elif "Occasion manquée" in st.session_state.classement:
             st.warning("⚠️ **Opportunité non saisie** : Cette dépense aurait pu inclure des améliorations énergétiques.")
-
+        elif("Très favorable" or "Favorable") and "Défavorable" in st.session_state.classement: 
+            st.warning("⚠️ **Impact mixte** : Cette dépense a des impacts positifs et négatifs.")
+        elif "Très favorable" in st.session_state.classement:
+            st.success("✅ **Impact positif fort** : Cette dépense réduit significativement les émissions de GES.")
+        elif "Favorable sous conditions" in st.session_state.classement:
+            st.success("⚠️ **Impact positif limité** : Cette dépense améliore la performance, mais sous conditions.")
         else:
             st.write("🔍 **À approfondir** : Analyse complémentaire nécessaire.")
 
