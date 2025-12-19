@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from pathlib import Path
 
 # Configuration de la page
 st.set_page_config(page_title="Outil de Classement I4CE")
@@ -453,31 +454,22 @@ IMAGES_PAR_CHEMIN = {
 
 }
 
-from pathlib import Path
-
-# __file__ = chemin complet du script en cours
-base_path = Path(__file__).parent  # répertoire contenant le script
-chemin_image = base_path / "images" / "batiment_construction.png"
-
-if chemin_image.exists():
-    with open(chemin_image, "rb") as f:
-        image_bytes = f.read()
-    st.image(image_bytes, use_column_width=True)
-else:
-    st.error(f"Image non trouvée : {chemin_image}")
-
-
-
-
-
-
 
 # Sélection de l'image correspondant au chemin
 image_a_afficher = IMAGES_PAR_CHEMIN.get((rubrique, sous_rubrique), None)
 
 # Affichage en bas de la page
 if image_a_afficher:
-    st.subheader("Illustration associée")
-    st.image(image_a_afficher, use_column_width=True)
+    base_path = Path(__file__).parent  # répertoire contenant le script
+    chemin_image = base_path / image_a_afficher
+
+    if chemin_image.exists():
+        with open(chemin_image, "rb") as f:
+            image_bytes = f.read()
+        st.subheader("Illustration associée")
+        st.image(image_bytes, use_column_width=True)
+    else:
+        st.error(f"Image non trouvée : {chemin_image}")
 else:
     st.info("🔍 Pas d'image disponible pour cette rubrique / sous-rubrique.")
+
