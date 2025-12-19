@@ -79,51 +79,47 @@ arbre_decision = {
                     }
                 }
             },
-            "Transports routiers non collectifs": {
-                "Type d'investissement": {
-                    "Achat de véhicules": {
-                        "Type de véhicules": {
-                            "Véhicules légers": {
-                                "Motorisation": {
-                                    "Moins de 50 gCO2/km": "100 % Très favorable",
-                                    "Plus de 50 gCO2/km": "100 % Défavorable"
-                                }
-                            },
-                            "Poids lourds": {
-                                "Motorisation": {
-                                    "Électrique/bioGNV/hydrogène décarboné": "100 % Très favorable",
-                                    "Hybride/Gaz": "100 % Favorable sous conditions",
-                                    "Diesel/essence": "100 % Défavorable"
-                                }
-                            },
-                            "Deux roues": {
-                                "Motorisation": {
-                                    "Électrique ou actif": "100 % Très favorable",
-                                    "Fossiles": "100 % Défavorable"
-                                }
-                            }
+            "Achat de véhicules": {
+                "Type de véhicules": {
+                    "Véhicules légers": {
+                        "Motorisation": {
+                            "Moins de 50 gCO2/km": "100 % Très favorable",
+                            "Plus de 50 gCO2/km": "100 % Défavorable"
                         }
                     },
-                    "Entretien de véhicules": {
-                        "Type de véhicules": {
-                            "Voiture": {
-                                "Motorisation": {
-                                    "Moins de 50 gCO2/km": "100 % Très favorable",
-                                    "Plus de 50 gCO2/km": "100 % Neutre"
-                                }
-                            },
-                            "Utilitaire/Camion": {
-                                "Motorisation": {
-                                    "Électrique/bioGNV/hydrogène décarboné/hybride": "100 % Très favorable",
-                                    "Diesel/essence": "100 % Neutre"
-                                }
-                            },
-                            "Deux roues": {
-                                "Motorisation": {
-                                    "Électrique ou actif": "100 % Très favorable",
-                                    "Fossiles": "100 % Neutre"
-                                }
-                            }
+                    "Poids lourds": {
+                        "Motorisation": {
+                            "Électrique/bioGNV/hydrogène décarboné": "100 % Très favorable",
+                            "Hybride/Gaz": "100 % Favorable sous conditions",
+                            "Diesel/essence": "100 % Défavorable"
+                        }
+                    },
+                    "Deux roues": {
+                        "Motorisation": {
+                            "Électrique ou actif": "100 % Très favorable",
+                            "Fossiles": "100 % Défavorable"
+                        }
+                    }
+                }
+            },
+            "Entretien de véhicules": {
+                "Type de véhicules": {
+                    "Voiture": {
+                        "Motorisation": {
+                            "Moins de 50 gCO2/km": "100 % Très favorable",
+                            "Plus de 50 gCO2/km": "100 % Neutre"
+                        }
+                    },
+                    "Utilitaire/Camion": {
+                        "Motorisation": {
+                            "Électrique/bioGNV/hydrogène décarboné/hybride": "100 % Très favorable",
+                            "Diesel/essence": "100 % Neutre"
+                        }
+                    },
+                    "Deux roues": {
+                        "Motorisation": {
+                            "Électrique ou actif": "100 % Très favorable",
+                            "Fossiles": "100 % Neutre"
                         }
                     }
                 }
@@ -165,66 +161,46 @@ arbre_decision = {
                     "Pétrole, charbon": "100 % Défavorable"
                 }
             },
-            "Infrastructures énergétiques": {
-                "Type": {
-                    "Infrastructures de production d'énergie (hors énergies renouvelables agricoles)": {
-                        "Production d'électricité renouvelable": "100 % Très favorable",
-                        "Production de gaz renouvelable": "100 % Très favorable",
-                        "Agrocarburants": "100 % À approfondir",
-                        "Pétrole, charbon": "100 % Défavorable"
-                    },
-                    "Réseaux de distribution d'énergie": {
-                        "Transport et distribution d'électricité": {
-                            "Électricité renouvelable": "100 % Très favorable",
-                            "Électricité": "100 % Neutre"
-                        },
-                        "Transport et distribution de gaz": {
-                            "Gaz renouvelable": "100 % Très favorable",
-                            "Gaz": "100 % Neutre"
-                        },
-                        "Réseaux de chaleur/froid": {
-                            "Proxy : part d'énergies renouvelables": "100 % Très favorable",
-                            "Proxy : part d'énergies de co-génération": "100 % Favorable sous conditions",
-                            "Proxy : part d'énergies fossiles": "100 % Défavorable"
-                        }
-                    }
+            "Infrastructures de production d'énergie": {
+                "Production d'électricité renouvelable": "100 % Très favorable",
+                "Production de gaz renouvelable": "100 % Très favorable",
+                "Agrocarburants": "100 % À approfondir",
+                "Pétrole, charbon": "100 % Défavorable"
+            },
+            "Infrastructures de distribution d'énergie": {
+                "Transport et distribution d'électricité": {
+                    "Électricité renouvelable": "100 % Très favorable",
+                    "Électricité": "100 % Neutre"
+                },
+                "Transport et distribution de gaz": {
+                    "Gaz renouvelable": "100 % Très favorable",
+                    "Gaz": "100 % Neutre"
+                },
+                "Réseaux de chaleur/froid": {
+                    "Proxy : part d'énergies renouvelables": "100 % Très favorable",
+                    "Proxy : part d'énergies de co-génération": "100 % Favorable sous conditions",
+                "Proxy : part d'énergies fossiles": "100 % Défavorable"
                 }
             }
         }
     },
     "Agriculture": {
         "Sous-rubrique": {
-            "Aides aux exploitations": {
+            "Changement de pratiques agricoles": {
                 "Pratiques agricoles": {
                     "Encourageant la transition agroécologique (filières devant croître)": "100 % Très favorable",
                     "Encourageant la transition agroécologique (filières devant décroître)": "100 % Favorable sous conditions",
                     "N'entraînant pas de changement dans les pratiques agricoles": "100 % Défavorable"
-                },
-                "Actions d'efficacité énergétique des exploitations": {
+                }
+            },
+            "Actions d'efficacité énergétique des exploitations": {
+                "Type d'actions": {
                     "Économies d'énergie ou décarbonation du mixe prouvées": "100 % Favorable sous conditions",
                     "Serres chauffées, ou bâtiments d'élevage d'une exploitation sans pratiques de transition agroécologique": "100 % Défavorable"
-                },
-                "Construction/modernisation de bâtiments (hors efficacité énergétique)": {
-                    "Facilitant la transition agroécologique (filières devant croître)": "100 % Très favorable",
-                    "Facilitant la transition agroécologique (filières devant décroître)": "100 % Favorable sous conditions",
-                    "Exploitations sans pratiques de transition agroécologique identifiées, et serres chauffées": "100 % Défavorable"
-                },
-                "Production d'énergies renouvelables agricoles": {
-                    "Type d'énergies renouvelables": {
-                        "Éolien": "100 % Très favorable",
-                        "Solaire": {
-                            "Solaire sur toiture (hors bâtiment d'élevage)": "100 % Très favorable",
-                            "Solaire sur bâtiment d'élevage d'une exploitation avec pratiques de transition agroécologique": "100 % Favorable",
-                            "Solaire sur terres non productives": "100 % Très favorable",
-                            "Solaire sur bâtiment d'élevage d'une exploitation sans pratiques de transition agroécologique": "100 % Défavorable",
-                            "Solaire au sol sans considération pour la productivité des terres": "100 % À approfondir"
-                        },
-                        "Méthanisation": {
-                            "Couverture de fosses": "100 % Très favorable",
-                            "Installation de torchères": "100 % Très favorable",
-                            "Installation de méthaniseur": "100 % À approfondir"
-                        }
-                    },
+                }
+            },
+            "Construction/modernisation de bâtiments (hors efficacité énergétique)": {
+                "Type d'actions": {
                     "Facilitant la transition agroécologique (filières devant croître)": "100 % Très favorable",
                     "Facilitant la transition agroécologique (filières devant décroître)": "100 % Favorable sous conditions",
                     "Exploitations sans pratiques de transition agroécologique identifiées, et serres chauffées": "100 % Défavorable"
@@ -241,6 +217,24 @@ arbre_decision = {
                 "Pratiques d'exploitation": {
                     "Encourageant la gestion durable de la forêt (taxonomie européenne)": "100 % Très favorable",
                     "Exploitations forestières sans documentation de gestion durable": "100 % Neutre"
+                }
+            },
+            "Production d'énergies renouvelables agricoles": {
+                "Type d'énergies renouvelables": {
+                    "Éolien": "100 % Très favorable",
+                    "Solaire": {
+                        "Solaire sur toiture (hors bâtiment d'élevage)": "100 % Très favorable",
+                        "Solaire sur bâtiment d'élevage d'une exploitation avec pratiques de transition agroécologique": "100 % Favorable",
+                        "Solaire sur terres non productives": "100 % Très favorable",
+                        "Solaire sur bâtiment d'élevage d'une exploitation sans pratiques de transition agroécologique": "100 % Défavorable",
+                        "Solaire au sol sans considération pour la productivité des terres": "100 % À approfondir"
+                    },
+                    "Méthanisation": {
+                        "Couverture de fosses": "100 % Très favorable",
+                        "Installation de torchères": "100 % Très favorable",
+                        "Installation de méthaniseur": "100 % À approfondir"
+                    }
+
                 }
             }
         }
@@ -324,7 +318,8 @@ arbre_decision = {
 titres = ["Sous-rubrique", "Type", "Usage", "Partie concernée", "Motorisation", "Pratiques agricoles",
           "Performance énergie-carbone","Artificialisation des sols","Type de rénovation","Émissions"
           "Type de traitement","Type d'espace","Pratiques de production","Type d'énergie","Type de travaux",
-          "Entretien", "Type d'investissement"]
+          "Entretien", "Type d'investissement","Pratiques d'exploitation","Type d'actions","Type d'énergies renouvelables",
+          "Type de formations professionnelles et d'apprentissage","Mode de déplacement","Type de traitement","Type d'achat","Type de mobilités favorisées","Type de véhicules"]
 
 
 def parcourir_arbre(noeud, chemin, titre_courant=None):
@@ -385,7 +380,9 @@ if rubrique in arbre_decision:
         st.write(f"**Chemin de décision :** {' → '.join(st.session_state.etapes)}")
 
         # Explications supplémentaires
-        if "Très favorable" in st.session_state.classement:
+        if (("Très favorable" in st.session_state.classement) or ("Favorable sous conditions" in st.session_state.classement)) and ("Défavorable" in st.session_state.classement):
+            st.warning("⚠️ **Impact mixte** : Cette dépense a des impacts positifs et négatifs.")
+        elif "Très favorable" in st.session_state.classement:
             st.success("✅ **Impact positif fort** : Cette dépense réduit significativement les émissions de GES.")
         elif "Favorable sous conditions" in st.session_state.classement:
             st.success("⚠️ **Impact positif limité** : Cette dépense améliore la performance, mais sous conditions.")
@@ -395,8 +392,6 @@ if rubrique in arbre_decision:
             st.info("ℹ️ **Impact neutre** : Cette dépense n'a pas d'effet significatif sur les émissions.")
         elif "Occasion manquée" in st.session_state.classement:
             st.warning("⚠️ **Opportunité non saisie** : Cette dépense aurait pu inclure des améliorations énergétiques.")
-        elif ("Très favorable" or "Favorable") and "Défavorable" in st.session_state.classement: 
-            st.warning("⚠️ **Impact mixte** : Cette dépense a des impacts positifs et négatifs.")
         else:
             st.write("🔍 **À approfondir** : Analyse complémentaire nécessaire.")
 
@@ -419,15 +414,15 @@ IMAGES_PAR_CHEMIN = {
 
     ("Transports et infrastructures", "Transports ferroviaires (tramway, train)"): "images/transport_ferroviaire.png",
     ("Transports et infrastructures", "Transports collectifs routiers (bus)"): "images/transport_collectif.png",
-    ("Transports et infrastructures", "Achat de véhicule"): "images/transport_achat.png",
-    ("Transports et infrastructures", "Entretien de véhicule"): "images/transport_entretien.png",
+    ("Transports et infrastructures", "Achat de véhicules"): "images/transport_achat.png",
+    ("Transports et infrastructures", "Entretien de véhicules"): "images/transport_entretien.png",
     ("Transports et infrastructures", "Voirie"): "images/transport_voirie.png",
 
     ("Énergie", "Achats d'énergie"): "images/energie_achats.png",
     ("Énergie", "Infrastructures de production d'énergie"): "images/energie_infra_production.png",
     ("Énergie", "Infrastructures de distribution d'énergie"): "images/energie_infra_distribution.png",
 
-    ("Agriculture", "Pratiques agricoles"): "images/agriculture_aide_exploitation.png",
+    ("Agriculture", "Changement de pratiques agricoles"): "images/agriculture_aide_exploitation.png",
     ("Agriculture", "Construction/modernisation de bâtiments (hors efficacité énergétique)"): "images/agriculture_batiment_contruction_reno.png",
     ("Agriculture", "Circuits courts"): "images/agriculture_circuit_court.png",
     ("Agriculture", "Actions d'efficacité énergétique des exploitations"): "images/agriculture_efficacite_nrj.png",
@@ -440,9 +435,12 @@ IMAGES_PAR_CHEMIN = {
     ("RH", "Dépenses personnels"): "images/rh_depense_personnel.png",
     ("RH", "Frais de déplacement"): "images/rh_frais_deplacement.png",
 
-    ("Espaces verts", None): "images/espaces_verts.png",
+    ("Espaces verts", "Développement ou entretien d'espaces arborés"): "images/espaces_verts.png",
+    ("Espaces verts", "Développement ou entretien d'espaces verts sans spécificités arbres"): "images/espaces_verts.png",
 
-    ("Alimentation", None): "images/alimentation.png",
+    ("Alimentation", "Repas végétariens"): "images/alimentation.png",
+    ("Alimentation", "Autres repas"): "images/alimentation.png",
+    ("Alimentation", "Viande de ruminants"): "images/alimentation.png",
 
     ("Déchets", "Gestion des déchets"): "images/dechets_gestion.png",
 
