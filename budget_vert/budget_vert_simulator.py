@@ -453,6 +453,18 @@ IMAGES_PAR_CHEMIN = {
 
 }
 
+from pathlib import Path
+
+chemin_image = Path("images/batiment_construction.png")
+
+if chemin_image.exists():
+    # Lire l'image en bytes
+    with open(chemin_image, "rb") as f:
+        image_bytes = f.read()
+    st.image(image_bytes, use_column_width=True)
+else:
+    st.error(f"Image non trouvée : {chemin_image}")
+
 # Sélection de l'image correspondant au chemin
 image_a_afficher = IMAGES_PAR_CHEMIN.get((rubrique, sous_rubrique), None)
 
