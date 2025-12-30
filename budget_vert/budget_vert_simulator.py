@@ -5,8 +5,6 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-#st.logo("Logo_CdC_Aunis_sud.jpg")  
-
 with st.sidebar:
     st.caption("v1.0")
 
