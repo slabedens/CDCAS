@@ -10,7 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent
 logo_path = BASE_DIR / "Logo_CdC_Aunis_sud.jpg"
 
 with st.sidebar:
-    st.image(logo_path, use_column_width=True)
+    st.logo(logo_path, use_column_width=True)
     st.caption("v1.0")
 
 # Navigation
