@@ -13,6 +13,7 @@ logo_path = BASE_DIR / "Logo_CdC_Aunis_sud.jpg"
 st.logo(logo_path)
 
 with st.sidebar:
+    st.caption("Contact : s.labedens@aunis-sud.fr")
     st.caption("v1.0")
 
 # Navigation
